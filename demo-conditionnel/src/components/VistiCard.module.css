@@ -1,0 +1,41 @@
+.card {
+	border: 0.2ch solid black;
+	border-radius: 1em;
+	padding: 0.5em 2em;
+
+	p {
+		margin: 0;
+	}
+
+	p:not(:last-child) {
+		margin-bottom: 0.5em;
+	}
+}
+
+.name {
+	text-transform: uppercase;
+}
+
+.xp-jr::before {
+	content: " (Junior) ";
+	color: grey;
+}
+
+.email {
+	font-style: italic;
+}
+
+.card-f {
+	background-color: #dc143c25;
+}
+
+.card-h {
+	background-color: #8cffe22f;
+}
+
+.card-x {
+	background-color: #ffa50025;
+}
+.xp-sr {
+	border-color: gold;
+}
