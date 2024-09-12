@@ -1,6 +1,11 @@
 import style from "./WelcomeAge.module.css"
 
-const WelcomeAge = ({name,age})=>{
+/**
+ * 
+ * @param {{name:string, age:number}} props 
+ * @returns rendu du composant
+ */
+const WelcomeAge = ({name,age = 18})=>{
 
 
 return <>
