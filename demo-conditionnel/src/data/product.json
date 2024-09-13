@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Laptop",
+        "description": "Un ordinateur portable puissant avec 16GB de RAM et 512GB SSD.",
+        "price": 1200.00,
+        "promotion": true
+    },
+    {
+        "id": 2,
+        "name": "Smartphone",
+        "description": null,
+        "price": 799.49,
+        "promotion": false
+    },
+    {
+        "id": 3,
+        "name": "Casque Audio",
+        "description": "Casque sans fil avec réduction de bruit active.",
+        "price": 199.99,
+        "promotion": true
+    },
+    {
+        "id": 4,
+        "name": "Montre Connectée",
+        "description": null,
+        "price": 249.90,
+        "promotion": false
+    },
+    {
+        "id": 5,
+        "name": "Tablette",
+        "description": "Tablette 10 pouces avec écran HD et 64GB de stockage.",
+        "price": 329.99,
+        "promotion": true
+    }
+]

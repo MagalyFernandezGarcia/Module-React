@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "firstname": "Della",
+        "lastname": "Duck",
+        "age": 37
+    },
+    {
+        "id":2,
+        "firstname": "Marc",
+        "lastname": "Leroy",
+        "age": null
+    },
+    {
+        "id":3,
+        "firstname": "Sophie",
+        "lastname": "Martin",
+        "age": 29
+    },
+    {
+        "id":4,
+        "firstname": "Luc",
+        "lastname": "Dubois",
+        "age": null
+    },
+    {
+        "id":5,
+        "firstname": "Emma",
+        "lastname": "Durand",
+        "age": 22
+    }
+]
