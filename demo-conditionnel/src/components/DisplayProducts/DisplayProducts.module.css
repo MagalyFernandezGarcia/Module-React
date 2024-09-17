@@ -11,6 +11,16 @@
 	border-radius: 1em;
 }
 
+.isPromo {
+	color: red;
+}
+
+img {
+	width: 400px;
+	height: 200px;
+
+	object-fit: cover;
+}
 .price {
 	display: flex;
 	justify-content: space-between;
@@ -25,8 +35,4 @@
 	height: 50px;
 	background-color: red;
 	color: white;
-}
-
-.isPromo {
-	color: red;
 }
