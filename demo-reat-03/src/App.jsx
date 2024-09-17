@@ -1,5 +1,5 @@
 import "./App.css";
-import Compteur from "./Compteur";
+import Compteur from "./components/Compteur";
 
 function App() {
 	// const handleClick = () => {

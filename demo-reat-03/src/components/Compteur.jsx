@@ -25,3 +25,25 @@ const Compteur = ({ number = 1 }) => {
 };
 
 export default Compteur;
+
+// correction
+
+const CompteurCorr = ({ increment = 1 }) => {
+	const [count, setCount] = useState(0);
+
+	const handleIncrement = () => {
+		setCount((prevValue) => prevValue + increment);
+	};
+
+	const handleReset = () => {
+		setCount(0);
+	};
+
+	return (
+		<>
+			<p>{count}</p>
+			<button onClick={handleIncrement}>+ {increment}</button>
+			<button onClick={handleReset}>Reset</button>
+		</>
+	);
+};
