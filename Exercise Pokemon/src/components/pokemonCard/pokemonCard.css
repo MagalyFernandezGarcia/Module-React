@@ -1,0 +1,98 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.card {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border: solid 1px black;
+	width: 350px;
+	background-color: whitesmoke;
+	border-radius: 5px;
+}
+
+.icon {
+	width: 100px;
+}
+
+.typeContainer {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.typeCard {
+	border: solid 1px black;
+	width: 100px;
+	font-weight: bold;
+}
+.statsContainer {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: flex;
+	gap: 10px;
+}
+
+.grass {
+	background-color: green;
+}
+.poison {
+	background-color: blueviolet;
+}
+.fire {
+	background-color: orange;
+}
+.water {
+	background-color: aqua;
+}
+.flying {
+	background-color: lightblue;
+}
+.bug {
+	background-color: yellowgreen;
+}
+.normal {
+	background-color: gray;
+}
+.electric {
+	background-color: yellow;
+}
+.ground {
+	background-color: brown;
+}
+.ice {
+	background-color: lightcyan;
+}
+.fairy {
+	background-color: pink;
+}
+.fighting {
+	background-color: red;
+}
+.psychic {
+	background-color: violet;
+}
+.rock {
+	background-color: darkgray;
+}
+.ghost {
+	background-color: rgb(170, 31, 170);
+}
+.dragon {
+	background-color: rebeccapurple;
+}
+.dark {
+	background-color: black;
+	color: white;
+}

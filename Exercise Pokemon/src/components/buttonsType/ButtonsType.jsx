@@ -1,8 +1,10 @@
+import "./buttonType.css";
+
 const ButtonsType = ({ pokemons = [], stateType }) => {
 	const typeArray = [];
 	const filterTypes = () => {
 		pokemons.map((pokemon) => {
-			pokemon.types.forEach((type) => {
+			pokemon.types.map((type) => {
 				if (!typeArray.includes(type)) {
 					typeArray.push(type);
 				}
@@ -13,8 +15,11 @@ const ButtonsType = ({ pokemons = [], stateType }) => {
 	filterTypes();
 
 	const buttons = typeArray.map((type) => {
+		const className = `btn ${type}`;
 		return (
 			<button
+				className={className}
+				key={type}
 				onClick={() => {
 					stateType(type);
 				}}
@@ -24,7 +29,7 @@ const ButtonsType = ({ pokemons = [], stateType }) => {
 		);
 	});
 
-	return <section>{buttons}</section>;
+	return <section className="btnContainer">{buttons}</section>;
 };
 
 export default ButtonsType;

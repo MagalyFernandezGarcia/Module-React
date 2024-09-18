@@ -1,0 +1,74 @@
+.btnContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	height: 120px;
+
+	background-color: #2e9fe7;
+	border-radius: 5px;
+}
+
+.btn {
+	cursor: pointer;
+	width: 100px;
+	border: solid 3px black;
+}
+.btn:hover {
+	background-color: rgb(30, 130, 160);
+}
+
+.grass {
+	background-color: green;
+}
+.poison {
+	background-color: blueviolet;
+}
+.fire {
+	background-color: orange;
+}
+.water {
+	background-color: aqua;
+}
+.flying {
+	background-color: lightblue;
+}
+.bug {
+	background-color: yellowgreen;
+}
+.normal {
+	background-color: gray;
+}
+.electric {
+	background-color: yellow;
+}
+.ground {
+	background-color: brown;
+}
+.ice {
+	background-color: lightcyan;
+}
+.fairy {
+	background-color: pink;
+}
+.fighting {
+	background-color: red;
+}
+.psychic {
+	background-color: violet;
+}
+.rock {
+	background-color: darkgray;
+}
+.ghost {
+	background-color: rgb(170, 31, 170);
+}
+.dragon {
+	background-color: rebeccapurple;
+}
+.dark {
+	background-color: black;
+	color: white;
+}

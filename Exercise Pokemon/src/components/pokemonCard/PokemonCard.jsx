@@ -1,13 +1,22 @@
-const PokemonType = ({ pokemonType = [] }) => {
-	const listOfType = pokemonType.map((type) => <p key={type}>{type}</p>);
+import "./pokemonCard.css";
 
-	return <div>{listOfType}</div>;
+const PokemonType = ({ pokemonType = [] }) => {
+	const listOfType = pokemonType.map((type) => {
+		const className = `typeCard ${type}`;
+		return (
+			<p className={className} key={type}>
+				{type}
+			</p>
+		);
+	});
+
+	return <div className="typeContainer">{listOfType}</div>;
 };
 
 const PokemonStats = ({ pokemonStats = {} }) => {
 	return (
 		<>
-			<section>
+			<section className="statsContainer">
 				<div>
 					<p>HP: {pokemonStats.hp}</p>
 					<p>Speed: {pokemonStats.speed}</p>
@@ -26,27 +35,48 @@ const PokemonStats = ({ pokemonStats = {} }) => {
 };
 
 const PokemonCard = ({ pokemonArray = [], type = "" }) => {
-	const test = pokemonArray.filter((pokemon) => pokemon.type === type);
-	console.log(test);
-
-	const card = () => {
-		pokemonArray.map((pokemon) => {
-			return (
-				<div key={pokemon.id}>
-					<img src={pokemon.image} alt={pokemon.name} />
-					<p>{pokemon.name}</p>
-					<PokemonType pokemonType={pokemon.types} />
-					<p>{pokemon.description}</p>
-					<PokemonStats pokemonStats={pokemon.stats} />
-				</div>
-			);
-		});
-	};
-	card();
-
-	return <>{card()}</>;
+	return (
+		<main className="main">
+			{type === "" ? (
+				<Card pokemonArray={pokemonArray} />
+			) : (
+				<FilterPokemon pokemonArray={pokemonArray} type={type} />
+			)}
+		</main>
+	);
 };
 
 export default PokemonCard;
 
-const FilterPokemon = ({ type = "" }) => {};
+const Card = ({ pokemonArray = [] }) => {
+	return (
+		<>
+			{pokemonArray.map((pokemon) => {
+				return (
+					<div className="card" key={pokemon.id}>
+						<img src={pokemon.image} alt={pokemon.name} className="icon" />
+						<h3>{pokemon.name}</h3>
+						<PokemonType pokemonType={pokemon.types} />
+						<p>{pokemon.description}</p>
+						<PokemonStats pokemonStats={pokemon.stats} />
+					</div>
+				);
+			})}
+		</>
+	);
+};
+
+const FilterPokemon = ({ pokemonArray = [], type = "" }) => {
+	const filteredArray = [];
+
+	pokemonArray.filter((pokemon) => {
+		if (type != "") {
+			pokemon.types.some((typePkmn) => {
+				if (typePkmn === type) {
+					filteredArray.push(pokemon);
+				}
+			});
+		}
+	});
+	return <Card pokemonArray={filteredArray} />;
+};
