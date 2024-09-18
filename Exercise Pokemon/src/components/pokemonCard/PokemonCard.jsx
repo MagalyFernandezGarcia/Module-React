@@ -65,7 +65,11 @@ const Card = ({ pokemonArray = [] }) => {
 		</>
 	);
 };
-
+/**
+ * Génère un tableau de pokemons filtré en fonction du type passé via setState
+ * @param {pokemonArray} - liste de tous les pokemons
+ * @param {type} - type du pokemon passé via le State
+ */
 const FilterPokemon = ({ pokemonArray = [], type = "" }) => {
 	const filteredArray = [];
 
