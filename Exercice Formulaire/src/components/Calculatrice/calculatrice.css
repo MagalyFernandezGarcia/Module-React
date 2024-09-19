@@ -1,0 +1,23 @@
+.calcForm {
+	width: 100%;
+	div {
+		display: flex;
+	}
+	&:not(:last-child) {
+		margin-bottom: 1ch;
+	}
+	label::after {
+		content: ":";
+		margin-left: 0.5ch;
+		margin-right: 0.5ch;
+	}
+	input,
+	select,
+	textarea {
+		flex-grow: 1;
+		padding: 1ch;
+	}
+	button {
+		width: 100%;
+	}
+}
