@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Canard",
+        "nbLeg": 2,
+        "env": "Étangs"
+    },
+    {
+        "id": 2,
+        "name": "Chat",
+        "nbLeg": 4,
+        "env": "Maison"
+    },
+    {
+        "id": 3,
+        "name": "Chien",
+        "nbLeg": 4,
+        "env": "Maison"
+    },
+    {
+        "id": 4,
+        "name": "Poisson Rouge",
+        "nbLeg": 0,
+        "env": "Aquarium"
+    },
+    {
+        "id": 5,
+        "name": "Cheval",
+        "nbLeg": 4,
+        "env": "Prairies"
+    },
+    {
+        "id": 6,
+        "name": "Perroquet",
+        "nbLeg": 2,
+        "env": "Forêts tropicales"
+    },
+    {
+        "id": 7,
+        "name": "Lézard",
+        "nbLeg": 4,
+        "env": "Déserts"
+    }
+]

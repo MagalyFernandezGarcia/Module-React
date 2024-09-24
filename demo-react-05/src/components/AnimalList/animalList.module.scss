@@ -1,0 +1,35 @@
+.animal {
+    border: 0.1ch solid teal;
+    border-radius: 1ch;
+    box-shadow: 0.3ch 0.2ch 0.2ch skyblue;
+    padding: 0.7ch;
+    
+    display: grid;
+    grid-template-areas: "a c"
+                         "b c";
+    grid-template-columns: 1fr 4em;
+
+    &:not(:last-child) {
+        margin-bottom: 0.7ch;
+    }
+
+    p {
+        margin: 0;
+
+        &:nth-child(1) {
+            font-size: 1.1em;
+            color: teal;
+            font-weight: 600;
+            grid-area: a;
+        }
+
+        &:nth-child(2) {
+            grid-area: b;
+        }
+    }
+
+    button {
+        grid-area: c;
+        background-color: skyblue;
+    }
+}
