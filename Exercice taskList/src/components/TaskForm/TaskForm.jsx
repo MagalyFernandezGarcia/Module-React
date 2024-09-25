@@ -1,26 +1,31 @@
-import { useId, useState } from "react";
+import { useId, useRef, useState } from "react";
 import { nanoid } from "nanoid";
+import style from "./taskForm.module.css";
 
 const TaskForm = ({ onFormingTask = (data) => {} }) => {
 	const inputId = useId();
 	const [inputName, setInputName] = useState("");
 	const [textArea, setTextArea] = useState("");
 	const [priority, setPriority] = useState("normal");
+	const inputRef = useRef();
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
+		inputRef.current.classList.add(style["inputName"]);
 
 		const newTask = {
 			id: nanoid(),
 			name: inputName,
 			description: textArea,
 			priority: priority,
+			isFinished: false,
 		};
 		onFormingTask(newTask);
 	};
 	return (
 		<form onSubmit={handleSubmit}>
 			<div>
+				<h2>Ajouter une tâche</h2>
 				<label htmlFor={inputId + "name"}>Nom : </label>
 				<input
 					type="text"
@@ -28,6 +33,8 @@ const TaskForm = ({ onFormingTask = (data) => {} }) => {
 					id={inputId + "name"}
 					value={inputName}
 					onChange={(e) => setInputName(e.target.value)}
+					ref={inputRef}
+					required
 				/>
 			</div>
 			<div>
