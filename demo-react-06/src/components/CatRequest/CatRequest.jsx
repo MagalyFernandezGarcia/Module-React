@@ -23,7 +23,7 @@ const CatRequest = ({ breed }) => {
 				},
 			})
 			.then(({ data }) => {
-				console.log(data);
+				console.log("Yay ", data);
 				if (data.length >= 1) {
 					setDataRequest(data[0]);
 				} else {
