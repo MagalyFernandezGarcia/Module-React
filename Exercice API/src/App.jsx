@@ -5,8 +5,10 @@ import WeatherRequest from "./assets/components/WeatherRequest/WeatherRequest";
 
 function App() {
 	const [city, setCity] = useState(null);
+	const [arrayCities, setArrayCities] = useState([]);
 	const handleCityResearch = (city) => {
 		setCity(city);
+		setArrayCities((oldCity) => [city, ...oldCity]);
 	};
 
 	return (
@@ -15,7 +17,12 @@ function App() {
 				onSearch={handleCityResearch}
 				placeHolder="Rechercher une ville"
 			/>
-			{city && <WeatherRequest city={city} />}
+			{/* {city && <WeatherRequest city={city} />} */}
+			{/* <hr /> */}
+
+			{arrayCities.map((town) => {
+				return <WeatherRequest city={town} key={town} />;
+			})}
 		</>
 	);
 }
