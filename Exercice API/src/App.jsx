@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import Search from "./assets/components/Search/Search";
 import WeatherRequest from "./assets/components/WeatherRequest/WeatherRequest";
+import WeatherApp from "./correction/container/WeatherApp/WeatherApp";
+import SpinnerCorr from "./correction/componentsCorr/SpinnerCorr/SpinnerCorr";
 
 function App() {
 	const [city, setCity] = useState(null);
@@ -23,6 +25,8 @@ function App() {
 			{arrayCities.map((town) => {
 				return <WeatherRequest city={town} key={town} />;
 			})}
+
+			<WeatherApp />
 		</>
 	);
 }
