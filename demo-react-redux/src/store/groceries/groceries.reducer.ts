@@ -15,6 +15,7 @@ const initialiseState : GroceriesReducerState ={
 const grocerieReducer= createReducer(initialiseState, builder=>{
     builder.addCase(grocerAdd,(state,action)=>{
         state.list.push(action.payload)
+        state.count++
 
     })
     .addCase(grocerCheck,(state,action)=>{

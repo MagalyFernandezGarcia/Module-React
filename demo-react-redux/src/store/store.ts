@@ -13,7 +13,7 @@ const store =configureStore({
 
 //export du typage pour l'utilisation de redux
 export type AppStore = typeof store
-export type stateStore =ReturnType<AppStore["getState"]>
+export type StateStore =ReturnType<AppStore["getState"]>
 
 //export du store
 export default store
