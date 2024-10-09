@@ -1,7 +1,8 @@
 import { useDispatch } from "react-redux";
 import { GroceryNew } from "../../@types/grocery";
-import GroceryForm from "../../components/GroceryForm";
+
 import { grocerAdd } from "../../store/groceries/groceries.action";
+import GroceryForm from "../../components/GroceryForm/GroceryForm";
 
 const GroceryAddForm = () => {
 	//composant pour intéragir avec le store redux

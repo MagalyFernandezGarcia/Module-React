@@ -1,12 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import grocerieReducer from "./groceries/groceries.reducer";
 import recipeReducer from "./recipies/recipies.reducer";
+import countriesReducer from "./countries/contries.reducer";
 
 //configuration du store
 const store =configureStore({
     reducer:{
         groceries : grocerieReducer,
-        recipies : recipeReducer
+        recipies : recipeReducer,
+        countries: countriesReducer
     },
     devTools:import.meta.env.DEV
 })
