@@ -13,7 +13,9 @@ export type CountryRequestResult = [{
     independent: boolean;
     status: string;
     unMember: boolean;
-    currencies: object;
+    currencies: {
+        [key:string] : { name: string; symbol: string; }
+    }
     idd: {
         root: string;
         suffixes: Array<string>;
@@ -61,14 +63,14 @@ export type CountryRequestResult = [{
 
 export type Country = {
     name: string;
-    official: string;
+    officialName: string;
     shortName: string;
-    currencies: [
-        {
-            "name": string;
-            "symbol": string;
-        }
-    ];
+    currencies: CountryCurrency[];
     capital: string[];
     flag: string;
+};
+
+type CountryCurrency = {
+    "name": string;
+    "symbol": string;
 };

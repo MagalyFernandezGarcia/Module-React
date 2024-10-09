@@ -13,11 +13,11 @@ export  async function fetchCountryByName(name:string) : Promise<Country>{
 
     return {
         name : data.name.common,
-        official : data.name.official,
+        officialName : data.name.official,
         shortName : data.cca2,
         capital: data.capital,
         flag: data.flag,
-        currencies: Object.values(data.currencies) as [{name : string , symbol : string}]
+        currencies: Object.values(data.currencies) 
 
 
     }
