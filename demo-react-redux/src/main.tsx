@@ -7,10 +7,15 @@ import "./index.css";
 import store from "./store/store.ts";
 import { Provider } from "react-redux";
 
+//Initialisation du routing
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Routes from "./routes/Routes.tsx";
+const router = createBrowserRouter(Routes);
+
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>
 		<Provider store={store}>
-			<App />
+			<RouterProvider router={router} />
 		</Provider>
 	</StrictMode>
 );
